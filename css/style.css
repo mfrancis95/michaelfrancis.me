@@ -1,0 +1,258 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(../font/Raleway-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+header {
+    -webkit-align-items: center;
+    align-items: center;
+    background: #444 url(../img/background.jpg) center no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 80%;
+}
+
+header h2 {
+    font-weight: normal;
+}
+
+h1, h2 {
+    margin-bottom: 1em;
+    margin-top: 0;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+#learn-more {
+    bottom: 2.5%;
+    position: absolute;
+}
+
+#learn-more p {
+    font-size: 0.8em;
+    margin: 0;
+    opacity: 0.8;
+    visibility: hidden;
+}
+
+.fa-angle-down {
+    font-size: 2em;
+    opacity: 0.8;
+    transition: all .2s;
+}
+
+.fa-angle-down:hover {
+    cursor: pointer;
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+section {
+    padding: 2em 0 2em 0;
+}
+
+#whoami {
+    background-color: #f05f40;
+    color: #fff;
+}
+
+hr {
+    border: 3px dashed #fff;
+    opacity: 0.2;
+    width: 50%;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.button {
+    border: 3px solid;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: .8em 2em;
+    text-transform: uppercase;
+    transition: all .2s;
+}
+
+.button:hover {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+}
+
+#whoami .button {
+    background-color: #fff;
+    border-color: #fff;
+    color: #f05f40;
+}
+
+#whoami .button:hover {
+    background-color: #ddd;
+    border-color: #ddd;
+}
+
+#projects {
+    color: #444;
+}
+
+#projects .button {
+    background-color: #f05f40;
+    border-color: #f05f40;
+    color: #fff;
+}
+
+#projects .button:hover {
+    background-color: #d03d20;
+    border-color: #d03d20;
+}
+
+#skills {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+#skills span {
+    opacity: 0.25;
+    transition: opacity .2s;
+}
+
+#skills span:hover {
+    opacity: 1;
+}
+
+#projects .flex {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex {
+    -webkit-justify-content: center;
+    justify-content: center;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.project {
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 2em 0;
+}
+
+.project:last-child {
+    margin-bottom: 0;
+}
+
+.project img {
+    border-radius: 5px;
+    height: auto;
+    width: 80%;
+}
+
+.project p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+footer {
+    background-color: #444;
+}
+
+footer .fa {
+    -webkit-flex: 1;
+    flex: 1;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    transition: background-color .2s;
+}
+
+.fa-envelope {
+    background-color: #78c142;
+}
+
+.fa-envelope:hover {
+    background-color: #56a020;
+}
+
+.fa-linkedin {
+    background-color: #0077b5;
+}
+
+.fa-linkedin:hover {
+    background-color: #005593;
+}
+
+.fa-wordpress {
+    background-color: #d54e21;
+}
+
+.fa-wordpress:hover {
+    background-color: #b32c00;
+}
+
+@media only screen and (min-height: 270px) and (max-width: 480px), only screen and (min-height: 330px) and (max-width: 768px), only screen and (min-height: 450px) and (max-width: 992px), only screen and (min-height: 570px) {
+    
+    #learn-more p {
+        visibility: visible;
+    }
+    
+}
+
+@media only screen and (min-width: 480px) {
+    
+    body {
+        font-size: 1.5em;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    
+    body {
+        font-size: 2em;
+    }
+    
+    #projects .flex {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+    
+    .project {
+        margin: 0;
+    }
+    
+}
+
+@media only screen and (min-width: 992px) {
+    
+    body {
+        font-size: 2.5em;
+    }
+    
+}
