@@ -29,6 +29,8 @@ function smoothScrollTo(position, duration) {
 
 var whoami = document.getElementById("whoami");
 
-document.querySelector(".fa-angle-down").addEventListener("click", function() {
+document.querySelector(".fa-angle-down").addEventListener("click", function(event) {
+    event.preventDefault();
+    history.pushState(null, null, this.href);
     smoothScrollTo(whoami.offsetTop, 1000);
 });
