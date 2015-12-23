@@ -201,20 +201,20 @@ footer .fa {
     background-color: #56a020;
 }
 
+.fa-github {
+    background-color: #d54e21;
+}
+
+.fa-github:hover {
+    background-color: #b32c00;
+}
+
 .fa-linkedin {
     background-color: #0077b5;
 }
 
 .fa-linkedin:hover {
     background-color: #005593;
-}
-
-.fa-wordpress {
-    background-color: #d54e21;
-}
-
-.fa-wordpress:hover {
-    background-color: #b32c00;
 }
 
 @media only screen and (min-height: 270px) and (max-width: 480px), only screen and (min-height: 330px) and (max-width: 768px), only screen and (min-height: 450px) and (max-width: 992px), only screen and (min-height: 570px) {
