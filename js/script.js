@@ -1,3 +1,37 @@
+function smoothScroll(position, duration, ease, callback) {
+    position = position || 0;
+    var start = window.scrollY;
+    if (position === start) {
+        if (callback) {
+            callback();
+        }
+    }
+    else {
+        var change = position - start;
+        duration = duration || 500;
+        if (!ease) {
+            ease = function (time, start, change, duration) {
+                return change * time / duration + start;
+            };
+        }
+        var startTime = Date.now();
+        var step = function () {
+            var time = Date.now() - startTime;
+            if (time <= duration) {
+                window.scrollTo(0, ease(time, start, change, duration));
+                requestAnimationFrame(step);
+            }
+            else {
+                window.scrollTo(0, position);
+                if (callback) {
+                    callback();
+                }
+            }
+        };
+        step();
+    }
+}
+
 function easeInOutQuad(time, start, change, duration) {
     time /= duration / 2;
     if (time < 1) {
@@ -7,30 +41,12 @@ function easeInOutQuad(time, start, change, duration) {
         --time;
         return -change / 2 * (time * (time - 2) - 1) + start;
     }
-}
-
-function smoothScrollTo(position, duration) {
-    duration = duration || 500;
-    var start = window.scrollY;
-    var change = position - start;
-    var startTime = Date.now();
-    var step = function() {
-        var time = Date.now() - startTime;
-        window.scrollTo(0, easeInOutQuad(time, start, change, duration));
-        if (time <= duration) {
-            requestAnimationFrame(step);
-        }
-        else {
-            window.scrollTo(0, position);
-        }
-    };
-    requestAnimationFrame(step);
-}
+};
 
 var whoami = document.getElementById("whoami");
 
 document.querySelector(".fa-angle-down").addEventListener("click", function(event) {
     event.preventDefault();
     history.pushState(null, null, this.href);
-    smoothScrollTo(whoami.offsetTop, 1000);
+    smoothScroll(whoami.offsetTop, 1000, easeInOutQuad);
 });
