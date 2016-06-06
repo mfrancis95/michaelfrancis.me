@@ -142,7 +142,7 @@ a {
     transition: opacity .2s;
 }
 
-#skills span:hover {
+#skills span.tooltipper-hover {
     opacity: 1;
 }
 
