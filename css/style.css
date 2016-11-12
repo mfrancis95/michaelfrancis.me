@@ -288,6 +288,7 @@ footer .fa {
     font-size: 1rem;
     left: 50%;
     line-height: 1.5;
+    min-width: 50px;
     padding: 5px 10px;
     position: absolute;
     transform: translateX(-50%);
