@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Raleway";
-    src: url(../font/Raleway-Regular.ttf);
+    src: url(font/Raleway-Regular.ttf);
 }
 
 * {
@@ -18,7 +18,7 @@ body {
 header {
     -webkit-align-items: center;
     align-items: center;
-    background: #444 url(../img/background.jpg) center no-repeat;
+    background: #444 url(img/background.jpg) center no-repeat;
     background-size: cover;
     color: #fff;
     display: -webkit-flex;
