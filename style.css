@@ -166,10 +166,15 @@ a {
     margin-bottom: 0;
 }
 
-.project img {
+img {
     border-radius: 5px;
     height: auto;
+    transition: filter 0.2s;
     width: 80%;
+}
+
+img:hover {
+    filter: blur(2px);
 }
 
 .project p {
