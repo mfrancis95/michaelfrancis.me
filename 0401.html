@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://michaelfrancis.me" rel="canonical">
+        <link href="https://s3.amazonaws.com/michaelfrancis.me/images/favicon.ico" rel="icon" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta content="#b32c00" name="theme-color">
+        <meta content="initial-scale=1, width=device-width" name="viewport">
+        <style>
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.flip-card-outer {
+    color: white;
+    font-size: 2rem;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    perspective: 1000px;
+    text-align: center;
+    width: 600px;
+}
+
+.flip-card-outer:hover .flip-card-inner {
+    transform: rotateY(180deg)
+}
+
+.flip-card-inner {
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s
+}
+
+.flip-card-left:hover .flip-card-inner {
+    transform: rotateY(-180deg)
+}
+
+.flip-card-back,
+.flip-card-front {
+    backface-visibility: hidden;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.flip-card-front {
+    background-color: #f05f40;
+    display: flex;
+    flex: 1 1 0;
+}
+
+.flip-card-back {
+    align-content: center;
+    background-color: #1ED760;
+    transform: rotateY(180deg)
+}
+
+#text-container {
+    align-content: center;
+    padding: 1rem;
+}
+
+p {
+    font-family: "Raleway", sans-serif;
+}
+        </style>
+        <title>Nia sayang, maukah kamu menjadi April Mop-ku? 🫰</title>
+    </head>
+    <body>
+        <div class="flip-card-outer">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img height="300" src="https://s3.amazonaws.com/michaelfrancis.me/us.png" width="300">
+                    <div id="text-container">
+                        <p>Nia sayang, maukah kamu menjadi April Mop-ku? 🫰</p>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <a href="https://open.spotify.com/playlist/6ceHKsxmHCZ0RovrI35Nw1?si=cT0C4jPmSQ6AHLTMn9mppA&pt=bdd850ac73722dcbfaf9ada2169fb7b1&pi=7UuECeZwQwqqV"><i class="fa fa-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
