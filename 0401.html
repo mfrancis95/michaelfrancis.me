@@ -15,16 +15,17 @@ a {
 
 .flip-card-outer {
     color: white;
-    font-size: 2rem;
-    height: 300px;
+    cursor: pointer;
+    font-size: 1rem;
+    height: 100px;
     margin-left: auto;
     margin-right: auto;
     perspective: 1000px;
     text-align: center;
-    width: 600px;
+    width: 300px;
 }
 
-.flip-card-outer:hover .flip-card-inner {
+.flip-card-outer.hover .flip-card-inner {
     transform: rotateY(180deg)
 }
 
@@ -33,10 +34,6 @@ a {
     width: 100%;
     transform-style: preserve-3d;
     transition: transform 0.5s
-}
-
-.flip-card-left:hover .flip-card-inner {
-    transform: rotateY(-180deg)
 }
 
 .flip-card-back,
@@ -66,15 +63,28 @@ a {
 
 p {
     font-family: "Raleway", sans-serif;
+    margin: 0;
+}
+
+@media only screen and (min-width: 600px) {
+    .flip-card-outer {
+        font-size: 2rem;
+        height: 300px;
+        width: 600px;
+    }
+    img {
+        height: 300px;
+        width: 300px;
+    }
 }
         </style>
         <title>Nia sayang, maukah kamu menjadi April Mop-ku? 🫰</title>
     </head>
     <body>
-        <div class="flip-card-outer">
+        <div class="flip-card-outer" id="flip-card-outer">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img height="300" src="https://s3.amazonaws.com/michaelfrancis.me/us.png" width="300">
+                    <img height="100" src="https://s3.amazonaws.com/michaelfrancis.me/us.png" width="100">
                     <div id="text-container">
                         <p>Nia sayang, maukah kamu menjadi April Mop-ku? 🫰</p>
                     </div>
@@ -84,5 +94,13 @@ p {
                 </div>
             </div>
         </div>
+        <script>
+            const flipCardOuter = document.getElementById("flip-card-outer");
+            flipCardOuter.addEventListener("click", event => {
+                if (!event.target.classList.contains('fa')) {
+                    flipCardOuter.classList.toggle('hover');
+                }
+            })
+        </script>
     </body>
 </html>
