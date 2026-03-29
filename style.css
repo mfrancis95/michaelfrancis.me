@@ -1,3 +1,7 @@
+:root {
+    --primary-color: #f05f40;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -67,7 +71,7 @@ section {
 }
 
 #whoami {
-    background-color: #f05f40;
+    background-color: var(--primary-color);
     color: #fff;
 }
 
@@ -101,7 +105,7 @@ a {
 #whoami .button {
     background-color: #fff;
     border-color: #fff;
-    color: #f05f40;
+    color: var(--primary-color);
 }
 
 #whoami .button:hover {
@@ -114,8 +118,8 @@ a {
 }
 
 #projects .button {
-    background-color: #f05f40;
-    border-color: #f05f40;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
     color: #fff;
 }
 
