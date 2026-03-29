@@ -109,8 +109,8 @@ a {
 }
 
 #whoami .button:hover {
-    background-color: #ddd;
-    border-color: #ddd;
+    background-color: color-mix(in srgb, #fff 80%, black);
+    border-color: color-mix(in srgb, #fff 80%, black);
 }
 
 #projects {
@@ -124,8 +124,8 @@ a {
 }
 
 #projects .button:hover {
-    background-color: #d03d20;
-    border-color: #d03d20;
+    background-color: color-mix(in srgb, var(--primary-color) 80%, black);
+    border-color: color-mix(in srgb, var(--primary-color) 80%, black);
 }
 
 #skills {
@@ -192,27 +192,22 @@ footer .fa {
 }
 
 .fa-envelope {
-    background-color: #78c142;
-}
-
-.fa-envelope:hover {
-    background-color: #56a020;
+    --color: #78c142;
+    background-color: var(--color);
 }
 
 .fa-github {
-    background-color: #d54e21;
-}
-
-.fa-github:hover {
-    background-color: #b32c00;
+    --color: #d54e21;
+    background-color: var(--color);
 }
 
 .fa-linkedin {
-    background-color: #0077b5;
+    --color: #0077b5;
+    background-color: var(--color);
 }
 
-.fa-linkedin:hover {
-    background-color: #005593;
+footer .fa:hover {
+    background-color: color-mix(in srgb, var(--color) 80%, black);
 }
 
 @media only screen and (min-height: 270px) and (max-width: 507px), only screen and (min-height: 330px) and (max-width: 767px), only screen and (min-height: 500px) {
