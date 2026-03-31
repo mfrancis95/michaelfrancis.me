@@ -67,7 +67,7 @@ h1, h2 {
 }
 
 section {
-    padding: 2em 0 2em 0;
+    padding: 2em 0;
 }
 
 #whoami {
@@ -184,7 +184,8 @@ footer {
     background-color: #444;
 }
 
-footer .fa {
+footer .fa-solid,
+footer .fa-brands {
     flex: 1;
     padding-bottom: 1rem;
     padding-top: 1rem;
@@ -206,7 +207,8 @@ footer .fa {
     background-color: var(--color);
 }
 
-footer .fa:hover {
+footer .fa-solid:hover,
+footer .fa-brands:hover {
     background-color: color-mix(in srgb, var(--color) 80%, black);
 }
 
@@ -282,6 +284,7 @@ footer .fa:hover {
     padding: 5px 10px;
     position: absolute;
     transform: translateX(-50%);
+    white-space: nowrap;
 }
 
 .tooltip::before {
