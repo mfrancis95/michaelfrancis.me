@@ -16,7 +16,7 @@ body {
 
 header {
     align-items: center;
-    background: #444 url(https://s3.amazonaws.com/michaelfrancis.me/images/background.jpg) center no-repeat;
+    background: #444 url(https://cdn.michaelfrancis.me/images/background.jpg) center no-repeat;
     background-size: cover;
     color: #fff;
     display: flex;
