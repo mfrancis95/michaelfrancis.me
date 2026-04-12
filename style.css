@@ -299,12 +299,9 @@ footer .fa-brands:hover {
 }
 
 .tooltip-show {
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-    animation-name: tooltip-in;
+    animation: tooltip-in 0.5s both;
 }
 
 .tooltip-hide {
-    animation-duration: 0.5s;
-    animation-name: tooltip-out;
+    animation: tooltip-out 0.5s;
 }
